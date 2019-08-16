@@ -1,0 +1,7 @@
+setup.bash
+kitti
+robotcar
+*.pyc
+*.profile
+.idea
+myconf.png

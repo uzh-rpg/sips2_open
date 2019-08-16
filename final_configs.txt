@@ -1,0 +1,86 @@
+# Copyright (C) 2019 Titus Cieslewski, RPG, University of Zurich, Switzerland
+#   You can contact the author at <titus at ifi dot uzh dot ch>
+# Copyright (C) 2019 Konstantinos G. Derpanis,
+#   Dept. of Computer Science, Ryerson University, Toronto, Canada
+# Copyright (C) 2019 Davide Scaramuzza, RPG, University of Zurich, Switzerland
+#
+# This file is part of sips2_open.
+#
+# sips2_open is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# sips2_open is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with sips2_open. If not, see <http:#www.gnu.org/licenses/>.
+
+# ROBOT: --d=10 --tds=tmbrc --w=128 --ds=kt --num_scales=1 --ol=0.3 --val_best
+# HP: --d=12 --tds=hp --ds=hp --w=256 --nolk --num_scales=5
+
+# SUCCINCTNESS
+python plot_results.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --baseline=all
+python plot_results.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --baseline=all
+python plot_results.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --testing --baseline=all
+python plot_results.py --d=12 --tds=hp --ds=hp --nolk --testing --baseline=all
+
+# VARYK
+python plot_varyk.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --baseline=all
+python plot_varyk.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --testing --baseline=all
+python plot_varyk.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --baseline=all
+
+# PROB PRED
+python evaluate_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing
+python plot_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing
+python evaluate_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --num_test_pts=100
+python plot_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --num_test_pts=100
+python evaluate_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --num_test_pts=100
+python plot_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --num_test_pts=100
+
+python evaluate_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --num_test_pts=50
+python plot_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --num_test_pts=50
+python evaluate_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --num_test_pts=50
+python plot_prob_pred.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --num_test_pts=50
+
+
+# PLOT FORWARD PASSES
+python plot_forward_passes.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --num_test_pts=50
+python plot_forward_passes.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --num_test_pts=50
+python plot_forward_passes.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --testing --num_test_pts=50
+
+# SEQU_FORW
+python sequence_forward.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing --num_test_pts=50
+python sequence_forward.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing --num_test_pts=50
+python sequence_forward.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --testing --num_test_pts=50
+
+# CSV
+python create_csv.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --testing
+python create_csv.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --testing
+python create_csv.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --testing
+
+
+# ERROR WITH X EXTRACTIONS
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --baseline=all --num_test_pts=50 --testing
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --baseline=all --num_test_pts=50 --testing
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --baseline=all --num_test_pts=50 --testing
+
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --baseline=all --num_test_pts=100 --testing
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --baseline=all --num_test_pts=100 --testing
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eumh --val_best --baseline=all --num_test_pts=100 --testing
+
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=kt --val_best --baseline=all --num_test_pts=30 --testing
+python plot_ransac.py --d=10 --tds=tmbrc --w=128 --num_scales=1 --ol=0.3 --ds=eu --val_best --baseline=all --num_test_pts=30 --testing
+
+
+# BASELINE COMMANDS LFNET
+python run_lfnet.py --top_k=30 --in_dir=euroc/MH_01_easy/mav0/rect0 --out_dir=euroc_out/30/eurocMH_01_easy/rect_0
+python run_lfnet.py --top_k=50 --in_dir=euroc/MH_01_easy/mav0/rect0 --out_dir=euroc_out/50/eurocMH_01_easy/rect_0
+python run_lfnet.py --top_k=100 --in_dir=euroc/MH_01_easy/mav0/rect0 --out_dir=euroc_out/100/eurocMH_01_easy/rect_0
+python run_lfnet.py --top_k=150 --in_dir=euroc/MH_01_easy/mav0/rect0 --out_dir=euroc_out/150/eurocMH_01_easy/rect_0
+
+# BASELINE SUPER
+python superpoint_frontend_parse.py euroc/MH_01_easy/mav0/rect0 --cuda --write_dir=euroc_out/eurocMH_01_easy/rect_0 --img_glob='*.png'
