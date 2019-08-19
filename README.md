@@ -94,3 +94,7 @@ python plot_val_metrics.py
 in parallel. Here is what it should look like after over 60k iterations:
 
 ![plot_val_metrics](doc/plot_val_metrics.png)
+
+## Acknowledgments
+
+This work was supported by the National Centre of Competence in Research (NCCR) Robotics through the Swiss National Science Foundation and the SNSF-ERC Starting Grant. The Titan Xp used for this research was donated by the NVIDIA Corporation.  Konstantinos G. Derpanis is supported by a Canadian NSERC Discovery grant. He contributed to this work in his personal capacity as an Associate Professor at Ryerson University.
