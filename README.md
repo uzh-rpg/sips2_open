@@ -3,7 +3,7 @@
 ![render_kitti](doc/render_kitti.gif)
 ![render_euroc](doc/render_euroc.gif)
 
-This is the code for the 2019 3DV paper **SIPs: Succinct Interest Points from Unsupervised Inlierness Probability Learning** by [Titus Cieslewski](http://rpg.ifi.uzh.ch/people_titus.html), [Kosta Derpanis](http://scs.ryerson.ca/~kosta/) and [Davide Scaramuzza](http://rpg.ifi.uzh.ch/people_scaramuzza.html). When using this, please cite:
+This is the code for the 2019 3DV paper **SIPs: Succinct Interest Points from Unsupervised Inlierness Probability Learning** ([PDF](http://rpg.ifi.uzh.ch/docs/3DV19_Cieslewski.pdf)) by [Titus Cieslewski](http://rpg.ifi.uzh.ch/people_titus.html), [Kosta Derpanis](http://scs.ryerson.ca/~kosta/) and [Davide Scaramuzza](http://rpg.ifi.uzh.ch/people_scaramuzza.html). When using this, please cite:
 
 ```bib
 @InProceedings{Cieslewski19threedv,
