@@ -15,6 +15,12 @@ This is the code for the 2019 3DV paper **SIPs: Succinct Interest Points from Un
 }
 ```
 
+If you are looking to minimize the amount of data necessary for feature matching, you might also be interested in our related work [**Matching Features without Descriptors: Implicitly Matched Interest Points**](https://github.com/uzh-rpg/imips_open).
+
+## Supplementary Material
+
+The supplementary material mentioned in the paper can be found at http://rpg.ifi.uzh.ch/datasets/sips2/supp_sips_3dv.zip .
+
 ## Installation
 
 We recommend working in a [virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) (also when using ROS/catkin)
